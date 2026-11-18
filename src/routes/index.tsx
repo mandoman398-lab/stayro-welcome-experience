@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
 
 import background from "@/assets/stayro-background.webp.asset.json";
-import wordmark from "@/assets/stayro-wordmark.svg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,8 +22,6 @@ function Index() {
     <main className="stayro-page" dir="rtl" lang="ar">
       <img className="stayro-backdrop" src={background.url} alt="" aria-hidden="true" />
       <div className="stayro-screen-shade" aria-hidden="true" />
-
-      <img className="stayro-header-wordmark" src={wordmark.url} alt="Stayro" />
 
       <section className="stayro-brand" aria-label="ستيرو">
         <svg
