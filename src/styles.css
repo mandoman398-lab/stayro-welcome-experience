@@ -192,33 +192,75 @@
     background-color: var(--screen-overlay);
   }
 
+  .stayro-header-wordmark {
+    position: absolute;
+    z-index: 1;
+    top: 4.25rem;
+    right: max(2rem, calc((100vw - 72rem) / 2));
+    width: min(8rem, 30vw);
+    height: auto;
+  }
+
   .stayro-brand {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.7rem;
-    width: 100%;
-    padding: 3rem 1.5rem 1rem;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
     text-align: center;
   }
 
-  .stayro-wordmark {
-    display: block;
-    width: min(76vw, 25rem);
+  .stayro-symbol {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    width: min(76vw, 18rem);
     height: auto;
-    animation: stayro-reveal 1s cubic-bezier(0.2, 0.72, 0.2, 1) both,
-      stayro-breathe 7s 1s ease-in-out infinite;
+    overflow: visible;
+    color: var(--primary);
+    transform: translateX(-50%);
+  }
+
+  .stayro-symbol-path {
+    fill: var(--primary);
+    fill-opacity: 0.7;
+    stroke: currentColor;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: stayro-draw 1.8s cubic-bezier(0.45, 0, 0.2, 1) both;
+  }
+
+  .stayro-symbol-path-second {
+    animation-delay: 180ms;
+  }
+
+  .stayro-name {
+    position: absolute;
+    top: 23rem;
+    left: 50%;
+    margin: 0;
+    color: var(--foreground);
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    animation: stayro-text-reveal 500ms 600ms ease-out both;
   }
 
   .stayro-tagline {
+    position: absolute;
+    top: 27.75rem;
+    left: 50%;
     margin: 0;
     color: var(--foreground);
-    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.65;
-    animation: stayro-text-reveal 900ms 180ms ease-out both;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    animation: stayro-text-reveal 600ms 760ms ease-out both;
   }
 
   .stayro-socials {
@@ -228,7 +270,7 @@
     justify-content: center;
     gap: clamp(1.25rem, 4vw, 2.75rem);
     width: min(100% - 2.5rem, 32rem);
-    margin: 0 auto clamp(2.25rem, 7vh, 4rem);
+    margin: auto auto clamp(2.25rem, 7vh, 4rem);
     animation: stayro-text-reveal 900ms 350ms ease-out both;
   }
 
@@ -263,26 +305,15 @@
   }
 }
 
-@keyframes stayro-reveal {
+@keyframes stayro-draw {
   from {
-    opacity: 0;
-    transform: translateY(0.75rem) scale(0.93);
+    fill-opacity: 0;
+    stroke-dashoffset: 1;
   }
 
   to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes stayro-breathe {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.86;
+      fill-opacity: 0.7;
+    stroke-dashoffset: 0;
   }
 }
 
@@ -299,10 +330,6 @@
 }
 
 @media (max-width: 480px) {
-  .stayro-brand {
-    gap: 1.3rem;
-  }
-
   .stayro-socials {
     gap: 1.25rem;
     width: calc(100% - 2rem);
