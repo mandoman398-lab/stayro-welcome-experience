@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep Stayro's first-screen experience as a self-contained static page at `/`, with its visual identity and motion in the shared design system; this source has no dynamic capabilities to migrate.

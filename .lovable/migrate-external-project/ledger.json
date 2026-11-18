@@ -1,0 +1,104 @@
+{
+  "source": "code-archive",
+  "reference": "https://stayro.com",
+  "capabilities": [
+    {
+      "capability": "application code",
+      "source": "stayro-brand-splash-main.zip and https://stayro.com",
+      "outcome": "Stayro splash at / includes the animated official wordmark, Arabic slogan, and all three social links; live preview verified on desktop and mobile.",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "database schema",
+      "source": "archive inspection",
+      "outcome": "not detected; source experience is a static splash",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "application records",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "auth identities",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "authorization",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "uploaded media bytes",
+      "source": "official Stayro homepage background, source wordmark and favicon",
+      "outcome": "Stayro background, wordmark, and Arabic font are served as project assets; orange favicon is installed.",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "external providers",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "public endpoints",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "callbacks",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "webhooks",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "schedules",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "secrets",
+      "source": "archive inspection",
+      "outcome": "not detected",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "cutover",
+      "source": "source site and current preview",
+      "outcome": "The current preview is updated; the existing stayro.com site has not been changed.",
+      "status": "pending",
+      "next_action": "Publish the preview if the user wants to update the public site."
+    },
+    {
+      "capability": "verification",
+      "source": "current project preview",
+      "outcome": "Home screen, assets, animation, social destinations, contact/coming-soon removal, no horizontal overflow, and absence of browser runtime errors verified on desktop and mobile.",
+      "status": "verified",
+      "next_action": null
+    }
+  ]
+}
